@@ -4,10 +4,22 @@ import { IconsModule } from '../icons/icons.module';
 import { LoginModule } from '../login/login.module';
 import { UiModule } from '../ui/ui.module';
 import { TemplatesModule } from '../templates/templates.module';
+import { HeaderComponent } from './components/header/header.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule],
-  exports: [IconsModule, LoginModule, UiModule, TemplatesModule],
+  declarations: [HeaderComponent, NavComponent, FooterComponent],
+  imports: [CommonModule, RouterModule],
+  exports: [
+    IconsModule,
+    LoginModule,
+    UiModule,
+    TemplatesModule,
+    HeaderComponent,
+    NavComponent,
+    FooterComponent,
+  ],
 })
 export class CoreModule {}
